@@ -1,0 +1,15 @@
+{
+	"pipeline":[
+		"output.laz",
+	    {
+		"type":"filters.range",
+		"limits":"Z[0.10:]"
+		},
+	    {
+		"type":"writers.gdal",
+		"resolution":0.007,
+		"output_type":"mean",
+		"filename":"above10.tif"
+		}
+	]
+}
